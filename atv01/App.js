@@ -16,7 +16,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.androidSafeArea}>
       <View style={styles.container}>
-      <Image source={logo} style={{marginBottom:30}}></Image>
+      <Image source={logo} style={{marginBottom:10, width: '90%', height:'40%'}}></Image>
       <Text style={styles.title}>Nome:</Text>
         <TextInput placeholder="Name" style={styles.TextInputext} />
         <Text style={styles.title}>Senha:</Text>
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     marginVertical: 3,
     borderColor: "white",
     backgroundColor:'white',
-    color:'white',
+    color:'black',
 
   },
   androidSafeArea: {
