@@ -10,12 +10,3 @@ export default function App() {
 
   );
 }
-
-
-
-
-
-
-
-
-

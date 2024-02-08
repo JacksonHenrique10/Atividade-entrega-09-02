@@ -17,8 +17,9 @@ export default function Routes() {
         tabBarActiveTintColor: 'black',
         tabBarInactiveTintColor: 'white',
         tabBarStyle: {
-          backgroundColor: '#E9E9E9',
+          backgroundColor: '#A9A9A9',
         }
+        
       }}
     >
 
@@ -55,7 +56,8 @@ export default function Routes() {
           },
           tabBarIcon: ({ color, size }) => {
             return <FontAwesome5 name='briefcase' color={color} size={size}></FontAwesome5>
-          }
+          },
+          headerShown: false,
         }}
       />
 
@@ -64,14 +66,15 @@ export default function Routes() {
         component={Contato}
         options={{
           title: 'Contato',
-          headerTintColor: '#ffffff',
+          headerTintColor: '#fffff',
 
           headerStyle: {
-            backgroundColor: '#ff1493',
+            backgroundColor: '#ff493',
           },
           tabBarIcon: ({ color, size }) => {
             return <FontAwesome5 name='address-card' color={color} size={size}></FontAwesome5>
           },
+          headerShown: false,
         }}
       />
     </Tab.Navigator>

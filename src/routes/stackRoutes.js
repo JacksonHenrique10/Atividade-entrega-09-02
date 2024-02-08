@@ -10,15 +10,17 @@ export default function StackRoutes() {
             <Stack.Screen
                 name='Inicio'
                 component={Inicio}
+                options={{ headerShown: false }}
+                
             />
             {/* <Stack.Screen
                 name='Curso'
                 component={Curso}
-            />
-            <Stack.Screen
+            /> */}
+            {/* <Stack.Screen
                 name='Contato'
                 component={Contato}
-            /> */}
+            />  */}
 
         </Stack.Navigator>
     )
