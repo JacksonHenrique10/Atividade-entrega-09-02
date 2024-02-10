@@ -5,6 +5,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import StackRoutes from './stackRoutes';
 import Contato from '../pages/Contato';
 import Curso from '../pages/Curso';
+import Inicio from '../pages/Inicio';
 
 
 const Tab = createBottomTabNavigator();
@@ -25,7 +26,7 @@ export default function Routes() {
 
       <Tab.Screen
         name='Inicio'
-        component={StackRoutes}
+        component={Inicio}
 
         options={{
           tabBarLabel: 'Inicio',
@@ -45,7 +46,7 @@ export default function Routes() {
 
       <Tab.Screen
         name='Curso'
-        component={Curso}
+        component={StackRoutes}
 
         options={{
           title: 'Curso',

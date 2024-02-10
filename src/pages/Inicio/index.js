@@ -8,7 +8,7 @@ export default function Inicio() {
     return (
         <SafeAreaView style={styles.container} >
 
-            <Image source={require('../Inicio/senai.png')} style={{ width: 390, height: 100,  alignItems: 'center' }} />
+            <Image source={require('../../assets/senai.png')} style={{ width: 390, height: 100,  alignItems: 'center' }} />
 
             <Text style={styles.paragraph} />
 

@@ -1,6 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import Inicio from '../pages/Inicio';
+import Curso from '../pages/Curso';
+import CursoDetalhes from "../pages/CursoDetalhes";
 
 const Stack = createNativeStackNavigator();
 
@@ -8,19 +9,17 @@ export default function StackRoutes() {
     return (
         <Stack.Navigator>
             <Stack.Screen
-                name='Inicio'
-                component={Inicio}
-                options={{ headerShown: false }}
-                
-            />
-            {/* <Stack.Screen
                 name='Curso'
                 component={Curso}
-            /> */}
-            {/* <Stack.Screen
-                name='Contato'
-                component={Contato}
-            />  */}
+                options={{ headerShown: false }}
+                
+            /> 
+            <Stack.Screen
+                name='CursoDetalhes'
+                component={CursoDetalhes}
+            />
+
+           
 
         </Stack.Navigator>
     )

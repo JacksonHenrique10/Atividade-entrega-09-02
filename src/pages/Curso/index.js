@@ -1,26 +1,39 @@
 import { useNavigation } from "@react-navigation/native";
-import { Text, StyleSheet, SafeAreaView } from "react-native";
+import { Text, StyleSheet, SafeAreaView, Button } from "react-native";
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+
 
 
 export default function Curso() {
     const navigation = useNavigation();
+
+    function navegaDetalhes() {
+        navigation.navigate('CursoDetalhes', {
+            Curso: 'Curso de Desenvolvimento Web',
+            Descrição: 'Aprenda os fundamentos do desenvolvimento web, incluindo HTML, CSS e JavaScript. Este curso aborda desde conceitos básicos até técnicas avançadas de design e programação web.'
+        });
+    }
+
     return (
         <SafeAreaView style={styles.container} >
 
-            <Text style={{ fontSize: 25, fontWeight: 'bold' }}> Cursos</Text>
-            <Text style={styles.paragraph} />
+            <Text style={{ fontSize: 40, fontWeight: 'bold', }}> Cursos</Text>
+            <Text style={styles.paragraph}  />
+
+            
+
+
 
             <Text >
-                <Text style={styles.bold}> 1 -  Curso de Desenvolvimento Web </Text>
+                <Text style={styles.bold} onPress={navegaDetalhes}> 1 - Curso de Desenvolvimento Web </Text>
                 <Text style={styles.paragraph}> </Text>
             </Text>
-            <Text>
-                Descrição: Descrição: Aprenda os fundamentos do desenvolvimento web, incluindo HTML, CSS e JavaScript. Este curso aborda desde conceitos básicos até técnicas avançadas de design e programação web.
-            </Text>
+            {/* <Button onPress={navegaDetalhes} title="click"/> */}
+
 
             <Text style={styles.paragraph} />
-            <Text >
+
+            {/* <Text >
                 <Text style={styles.bold}> 2 -  Curso de Marketing Digital: </Text>
                 <Text style={styles.paragraph}> </Text>
             </Text>
@@ -34,7 +47,7 @@ export default function Curso() {
                 <Text style={styles.paragraph}> </Text>
             </Text>
             <Text>
-            Descrição: Aprenda os princípios da fotografia, incluindo composição, iluminação e edição de imagens. Este curso aborda desde os fundamentos da câmera até técnicas avançadas de fotografia, permitindo que você capture e edite fotos incríveis.            </Text>
+                Descrição: Aprenda os princípios da fotografia, incluindo composição, iluminação e edição de imagens. Este curso aborda desde os fundamentos da câmera até técnicas avançadas de fotografia, permitindo que você capture e edite fotos incríveis.            </Text> */}
         </SafeAreaView>
     )
 }
@@ -49,6 +62,7 @@ const styles = StyleSheet.create({
     },
     bold: {
         fontWeight: 'bold',
+        fontSize: 20,
     },
 
 });
