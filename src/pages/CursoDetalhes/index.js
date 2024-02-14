@@ -7,7 +7,7 @@ export default function Detalhes() {
     return (
         <SafeAreaView style={[styles.container]}>
 
-            <Text>Tela de Detalhes do Usuario</Text>
+            
 
             <Text>
                 { route.params?.Curso  ?? "Nome Completo não encontrado"}

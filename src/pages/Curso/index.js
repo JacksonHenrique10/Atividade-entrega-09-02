@@ -7,10 +7,24 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 export default function Curso() {
     const navigation = useNavigation();
 
-    function navegaDetalhes() {
+    function webDev() {
         navigation.navigate('CursoDetalhes', {
             Curso: 'Curso de Desenvolvimento Web',
             Descrição: 'Aprenda os fundamentos do desenvolvimento web, incluindo HTML, CSS e JavaScript. Este curso aborda desde conceitos básicos até técnicas avançadas de design e programação web.'
+        });
+    }
+
+    function mkt() {
+        navigation.navigate('CursoDetalhes', {
+            Curso: 'Curso de Marketing Digital',
+            Descrição: 'Explore estratégias de marketing digital, incluindo SEO, mídias sociais, publicidade online e análise de dados. Este curso oferece uma visão abrangente das principais práticas e ferramentas de marketing digital utilizadas atualmente.'
+        });
+    }
+
+    function foto() {
+        navigation.navigate('CursoDetalhes', {
+            Curso: 'Curso de Fotografia',
+            Descrição: 'Aprenda os princípios da fotografia, incluindo composição, iluminação e edição de imagens. Este curso aborda desde os fundamentos da câmera até técnicas avançadas de fotografia, permitindo que você capture e edite fotos incríveis. '
         });
     }
 
@@ -21,33 +35,27 @@ export default function Curso() {
             <Text style={styles.paragraph}  />
 
             
-
-
-
             <Text >
-                <Text style={styles.bold} onPress={navegaDetalhes}> 1 - Curso de Desenvolvimento Web </Text>
+                <Text style={styles.bold} onPress={webDev}> 1 - Curso de Desenvolvimento Web </Text>
                 <Text style={styles.paragraph}> </Text>
             </Text>
-            {/* <Button onPress={navegaDetalhes} title="click"/> */}
+            {/* <Button onPress={webDev} title="click"/> */}
 
 
             <Text style={styles.paragraph} />
 
-            {/* <Text >
-                <Text style={styles.bold}> 2 -  Curso de Marketing Digital: </Text>
+            <Text >
+                <Text style={styles.bold} onPress={mkt}> 2 -  Curso de Marketing Digital: </Text>
                 <Text style={styles.paragraph}> </Text>
             </Text>
-            <Text>
-                Descrição: Explore estratégias de marketing digital, incluindo SEO, mídias sociais, publicidade online e análise de dados. Este curso oferece uma visão abrangente das principais práticas e ferramentas de marketing digital utilizadas atualmente.
-            </Text>
+           
 
             <Text style={styles.paragraph} />
             <Text >
-                <Text style={styles.bold}> 3 -  Curso de Fotografia: </Text>
+                <Text style={styles.bold} onPress={foto}> 3 -  Curso de Fotografia: </Text>
                 <Text style={styles.paragraph}> </Text>
             </Text>
-            <Text>
-                Descrição: Aprenda os princípios da fotografia, incluindo composição, iluminação e edição de imagens. Este curso aborda desde os fundamentos da câmera até técnicas avançadas de fotografia, permitindo que você capture e edite fotos incríveis.            </Text> */}
+            
         </SafeAreaView>
     )
 }
